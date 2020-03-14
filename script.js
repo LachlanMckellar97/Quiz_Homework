@@ -79,17 +79,18 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     })
+    if (selectedButton.classList.contains("wrong")) {
+        timeleft -= 10
+    }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove("hide");
     } else {
         Startdiv.classList.add("hide");
         scoreInput.classList.remove("hide");
         score = timeleft;
+        document.getElementById("finalscore").innerText = score
         timer.classList.add("hide");
         timeleft = 0
-    }
-    if (selectedButton.classList.contains("wrong")) {
-        timeleft -= 10
     }
 }
 
