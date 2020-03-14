@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Homework</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="countdown" class="hide"></div>
+
+    <div class="container" id="Startdiv">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+    </div>
+
+    <div class="container hide" id="scoreinput">
+        <h1>All Done!</h1>
+        <p>Your final score is <span id="finalscore">placeholder</span>!</p>
+        <form>Enter Initials here: <input type="text" id="Initials" placeholder="Initials" /> <button id="submitbutton">Submit</button> </form>
+    </div>
+
+    <div class="container hide" id="highscorePage">
+        <h1>Highscores!</h1>
+        <ul id="highscorelist">
+        </ul>
+        <button class="btn" id="homepagebtn">Homepage</button>
+        <button class="btn" id="clearhighbtn">Clear Highscores</button>
+    </div>
+</body>
+</html>
